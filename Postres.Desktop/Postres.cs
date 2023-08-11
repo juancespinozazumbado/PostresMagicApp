@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Postres.Desktop
 {
-    public partial class Form1 : Form
+    public partial class Postres : Form
     {
-        public Form1()
+        Contenedor _padre;
+        public Postres(Contenedor padre)
         {
+            _padre = padre;
             InitializeComponent();
+        }
+
+        private void AtrasBtn_Click(object sender, EventArgs e)
+        {
+            _padre.CargarFormulario(new CrearPostre());
         }
     }
 }
