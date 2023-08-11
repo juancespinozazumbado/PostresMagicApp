@@ -26,7 +26,6 @@ namespace Postres.Core.CasosDeUso
           
         }
 
-       
         public T Obtener(int indice)
         {
             if (!EstaVacia() && Datos.Length > indice )
@@ -51,7 +50,7 @@ namespace Postres.Core.CasosDeUso
         public void Eliminar(T Dato)
         {
             Datos = (T[])Datos.Where(i => !i.Equals(Dato)).ToArray();
-            Tamaño--;
+            Tamaño --;
         }
 
         public void Eliminar(int indice)
