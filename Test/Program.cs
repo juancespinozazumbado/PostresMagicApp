@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,7 @@ namespace Test
 {
     internal class Program
     {
+        private static RepositorioDePostres _repo = new RepositorioDePostres(new ArregloDeObjetos<Postre>());
         static void Main(string[] args)
         {
             //string[] ints = { "Mimo","Momo", "Alpa", "Azi"};
@@ -27,44 +29,34 @@ namespace Test
 
             //Console.WriteLine(ints);
 
-            ArregloDeObjetos<Postre> postres = new ArregloDeObjetos<Postre>();
+            addData();
 
-            postres.Agregar(new Postre{
-                Id = "ID00001",
-                Nombre = "PostreMock1"
-            });
-            postres.Agregar(new Postre
-            {
-                Id = "ID00002",
-                Nombre = "PostreMock2"
-            });
-            postres.Agregar(new Postre
-            {
-                Id = "ID00003",
-                Nombre = "PostreMock3"
-            });
+            _repo.AgregarUnIngrediente("ID000001", new Ingrediente { Id = "IG00001",Nombre= "Chile",Cantidad = 2 });
+            _repo.AgregarUnIngrediente("ID000001", new Ingrediente { Id = "IG00003", Nombre = "Salsa", Cantidad = 1 });
+            _repo.AgregarUnIngrediente("ID000002", new Ingrediente { Id = "IG00002", Nombre = "Papas", Cantidad = 2 });
+            _repo.AgregarUnIngrediente("ID000003", new Ingrediente { Id = "IG00004", Nombre = "Olores", Cantidad = 5});
 
 
-            foreach(Postre p in postres)
-            {
-                Console.WriteLine(p.Nombre);
-               
-            }
+            _repo.EliminarUnIngrediente("ID000001", "IG00001");
+            _repo.EliminarUnIngrediente("ID000003", "IG00004");
 
 
-            Postre pos = postres.Obtener(2);
-            Console.WriteLine(postres.Obtener(pos).Nombre);
 
-            postres.Eliminar(pos);
-            postres.Eliminar(1);
+            Console.WriteLine("");
 
-            foreach (Postre p in postres)
-            {
-                Console.WriteLine(p.Nombre);
-
-            }
-
-            Console.ReadLine();
         }
+          
+
+        static void addData()
+        {
+            _repo.AgregarUnPostre(new Postre { Id = "ID000001", Nombre = "Postre1" });
+            _repo.AgregarUnPostre(new Postre { Id = "ID000002", Nombre = "Postre2" });
+            _repo.AgregarUnPostre(new Postre { Id = "ID000003", Nombre = "Postre3" });
+            _repo.AgregarUnPostre(new Postre { Id = "ID000004", Nombre = "Postre4" });
+
+
+        }
+
+      
     }
 }

@@ -15,10 +15,16 @@ namespace Postres.Core.CasosDeUso
         }
 
 
+        void ordenarLista()
+        {
+            _Postres.OrderBy(p => p.Nombre);
+        }
         public void AgregarUnPostre(Postre postre)
         {
             _Postres.Agregar(postre);
-            
+            ordenarLista();
+
+
         }
         public void AgregarUnIngrediente(string Id, Ingrediente ingrediente)
         {
@@ -32,7 +38,7 @@ namespace Postres.Core.CasosDeUso
 
         public Postre ObtenerUnPostrePorId(string Id)
         {
-            return _Postres.First(p => p.Equals(Id));  
+            return _Postres.First(p => p.Id.Equals(Id));  
         }
 
         public bool DarDeAltaUnPostre(string Id)

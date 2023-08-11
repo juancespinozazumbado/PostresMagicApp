@@ -22,6 +22,8 @@ namespace Postres.Core.CasosDeUso
         {
            Datos = (T[]) Datos.Append(Dato).ToArray();
            Tamaño = Datos.Length;
+            
+          
         }
 
        
