@@ -5,8 +5,6 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postres.Core", "Postres.Core\Postres.Core.csproj", "{3B0C3F02-05BC-4BB9-A9A0-26752A16695B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{82153894-A2B5-4328-8FF7-07F0828E5C3D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postres.Desktop", "Postres.Desktop\Postres.Desktop.csproj", "{3C0E1CF7-B40E-41EE-9155-1E0A69D20829}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{3B0C3F02-05BC-4BB9-A9A0-26752A16695B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B0C3F02-05BC-4BB9-A9A0-26752A16695B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B0C3F02-05BC-4BB9-A9A0-26752A16695B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{82153894-A2B5-4328-8FF7-07F0828E5C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82153894-A2B5-4328-8FF7-07F0828E5C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82153894-A2B5-4328-8FF7-07F0828E5C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82153894-A2B5-4328-8FF7-07F0828E5C3D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C0E1CF7-B40E-41EE-9155-1E0A69D20829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3C0E1CF7-B40E-41EE-9155-1E0A69D20829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C0E1CF7-B40E-41EE-9155-1E0A69D20829}.Release|Any CPU.ActiveCfg = Release|Any CPU
