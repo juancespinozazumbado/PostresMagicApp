@@ -1,13 +1,14 @@
 ﻿using Postres.Core.Dominio;
 using System;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Postres.Core.CasosDeUso
 {
     public class RepositorioDePostres : IRepositorioDePostres
     {
 
-        private readonly ArregloDeObjetos<Postre> _Postres;
+        private readonly  ArregloDeObjetos<Postre> _Postres;
 
         public RepositorioDePostres(ArregloDeObjetos<Postre> postres)
         {
@@ -15,14 +16,15 @@ namespace Postres.Core.CasosDeUso
         }
 
 
-        void ordenarLista()
+        void OrdenarLista()
         {
-            _Postres.OrderBy(p => p.Nombre);
+            _Postres.setDatos( _Postres.OrderBy(p => p.Nombre).ToArray());
         }
         public void AgregarUnPostre(Postre postre)
         {
             _Postres.Agregar(postre);
-            ordenarLista();
+            OrdenarLista();
+          
 
 
         }
@@ -63,12 +65,20 @@ namespace Postres.Core.CasosDeUso
 
         public Postre[] ObtenerListaDePostres()
         {
-            return _Postres.ToArray();
+            if (!_Postres.EstaVacia())
+            {
+                return _Postres.ToArray();
+            }
+            else return null;
         }
 
         public Postre[] ObtenerUnPostrePorNombre(string nombre)
         {
-            return _Postres.Where(p=> p.Nombre.Equals(nombre)).ToArray();       
+            if (!_Postres.EstaVacia())
+            {
+                return _Postres.Where(p => p.Nombre.Equals(nombre)).ToArray();
+            }else return null;
+                
         }
     }
 }

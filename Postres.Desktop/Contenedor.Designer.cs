@@ -51,7 +51,7 @@
             this.PostresButtom.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PostresButtom.Location = new System.Drawing.Point(25, 117);
             this.PostresButtom.Name = "PostresButtom";
-            this.PostresButtom.Size = new System.Drawing.Size(148, 31);
+            this.PostresButtom.Size = new System.Drawing.Size(148, 40);
             this.PostresButtom.TabIndex = 0;
             this.PostresButtom.Text = "Postres";
             this.PostresButtom.UseVisualStyleBackColor = true;

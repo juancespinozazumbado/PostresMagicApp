@@ -104,6 +104,11 @@ namespace Postres.Core.CasosDeUso
         {
             return Tamaño;
         }
+
+        public void setDatos(T[] datos)
+        {
+            this.Datos = datos;
+        }
     }
    
 }

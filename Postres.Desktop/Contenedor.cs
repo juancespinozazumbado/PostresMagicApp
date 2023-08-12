@@ -1,19 +1,23 @@
-﻿using System;
+﻿using Postres.Core.CasosDeUso;
+using Postres.Desktop.Forms;
+using System;
 using System.Windows.Forms;
 
 namespace Postres.Desktop
 {
     public partial class Contenedor : Form
     {
-        public Contenedor()
+        private readonly RepositorioDePostres _repositorioDePostres;
+        public Contenedor( RepositorioDePostres repositorioDePostres)
         {
             InitializeComponent();
+            _repositorioDePostres = repositorioDePostres;
         }
 
       
         private void PostresButtom_Click(object sender, EventArgs e)
         {
-            Postres postresView = new Postres(this);
+            PostresLista postresView = new PostresLista(this, _repositorioDePostres);
             CargarFormulario(postresView);
         }
 

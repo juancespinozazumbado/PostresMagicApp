@@ -52,28 +52,46 @@
     <Compile Include="Contenedor.Designer.cs">
       <DependentUpon>Contenedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrearPostre.cs">
+    <Compile Include="Forms\AgregarIngrediente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrearPostre.Designer.cs">
+    <Compile Include="Forms\AgregarIngrediente.Designer.cs">
+      <DependentUpon>AgregarIngrediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CrearPostre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CrearPostre.Designer.cs">
       <DependentUpon>CrearPostre.cs</DependentUpon>
     </Compile>
-    <Compile Include="Postres.cs">
+    <Compile Include="Forms\DetallesPostre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Postres.Designer.cs">
-      <DependentUpon>Postres.cs</DependentUpon>
+    <Compile Include="Forms\DetallesPostre.Designer.cs">
+      <DependentUpon>DetallesPostre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PostresLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PostresLista.Designer.cs">
+      <DependentUpon>PostresLista.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Contenedor.resx">
       <DependentUpon>Contenedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrearPostre.resx">
+    <EmbeddedResource Include="Forms\AgregarIngrediente.resx">
+      <DependentUpon>AgregarIngrediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrearPostre.resx">
       <DependentUpon>CrearPostre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Postres.resx">
-      <DependentUpon>Postres.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DetallesPostre.resx">
+      <DependentUpon>DetallesPostre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PostresLista.resx">
+      <DependentUpon>PostresLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +114,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Postres.Core\Postres.Core.csproj">
+      <Project>{3B0C3F02-05BC-4BB9-A9A0-26752A16695B}</Project>
+      <Name>Postres.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

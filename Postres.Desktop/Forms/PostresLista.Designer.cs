@@ -1,6 +1,6 @@
-﻿namespace Postres.Desktop
+﻿namespace Postres.Desktop.Forms
 {
-    partial class Postres
+    partial class PostresLista
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DataGridPostres = new System.Windows.Forms.DataGridView();
             this.AtrasBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridPostres)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -44,38 +44,39 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lista De Postres";
             // 
-            // dataGridView1
+            // DataGridPostres
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 106);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(754, 267);
-            this.dataGridView1.TabIndex = 1;
+            this.DataGridPostres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridPostres.Location = new System.Drawing.Point(47, 106);
+            this.DataGridPostres.Name = "DataGridPostres";
+            this.DataGridPostres.RowHeadersWidth = 62;
+            this.DataGridPostres.RowTemplate.Height = 28;
+            this.DataGridPostres.Size = new System.Drawing.Size(754, 267);
+            this.DataGridPostres.TabIndex = 1;
+            this.DataGridPostres.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPostres_CellContentClick);
             // 
             // AtrasBtn
             // 
             this.AtrasBtn.Location = new System.Drawing.Point(60, 403);
             this.AtrasBtn.Name = "AtrasBtn";
-            this.AtrasBtn.Size = new System.Drawing.Size(110, 32);
+            this.AtrasBtn.Size = new System.Drawing.Size(110, 42);
             this.AtrasBtn.TabIndex = 2;
             this.AtrasBtn.Text = "Nuevo";
             this.AtrasBtn.UseVisualStyleBackColor = true;
             this.AtrasBtn.Click += new System.EventHandler(this.AtrasBtn_Click);
             // 
-            // Postres
+            // PostresLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 506);
             this.Controls.Add(this.AtrasBtn);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataGridPostres);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Postres";
+            this.Name = "PostresLista";
             this.Text = "Postres";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridPostres)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,7 +85,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridPostres;
         private System.Windows.Forms.Button AtrasBtn;
     }
 }

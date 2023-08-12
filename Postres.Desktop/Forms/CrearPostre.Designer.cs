@@ -1,4 +1,4 @@
-﻿namespace Postres.Desktop
+﻿namespace Postres.Desktop.Forms 
 {
     partial class CrearPostre
     {
@@ -68,7 +68,7 @@
             this.CrearBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CrearBtn.Location = new System.Drawing.Point(268, 150);
             this.CrearBtn.Name = "CrearBtn";
-            this.CrearBtn.Size = new System.Drawing.Size(103, 38);
+            this.CrearBtn.Size = new System.Drawing.Size(103, 44);
             this.CrearBtn.TabIndex = 3;
             this.CrearBtn.Text = "Crear";
             this.CrearBtn.UseVisualStyleBackColor = false;
